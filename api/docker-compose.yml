@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  osmarket-api:
+    image: node:lts
+    container_name: osmarket-api
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - NODE_ENV=development
+      - PORT=${API_PORT}
+      - MAINNET_PKEY=${MAINNET_PKEY}
+      - PREPROD_PKEY=${PREPROD_PKEY}
+      - PREVIEW_PKEY=${PREVIEW_PKEY}
+    ports:
+      - "${API_HOST_PORT}:${API_PORT}"
+    working_dir: /usr/src/app
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    command: npm run dev

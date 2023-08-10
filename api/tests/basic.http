@@ -1,0 +1,20 @@
+# Variables for simplicity
+# HOST
+@host = http://localhost:9111
+# @host = http://anna/api
+
+# NETWORK
+@network = preprod
+# @network = mainnet
+
+### Ping
+GET {{host}}/ping
+
+### Liveness
+GET {{host}}/health
+
+### Query Tip
+GET {{host}}/{{network}}/test
+
+### ERROR
+GET {{host}}/Bad
