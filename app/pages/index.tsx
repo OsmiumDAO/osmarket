@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 function IndexPage() {
   return (
     <RootLayout>
-      <div>IndexPage</div>
+      <div>This is a landing page</div>
     </RootLayout>
   )
 }
