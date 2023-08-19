@@ -32,7 +32,12 @@ function SectionOne() {
           Perferendis exercitationem, ea rem hic, quasi vitae eligendi iusto
           animi placeat sunt sequi sit id atque maiores blanditiis magnam est.
         </Typography>
-        <Box gap={1} display={'flex'} justifyContent={'center'} my={1}>
+        <Box
+          gap={1}
+          display={'flex'}
+          sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}
+          my={1}
+        >
           <Button
             variant='outlined'
             sx={{
@@ -73,8 +78,9 @@ function SectionOne() {
         <img
           style={{
             objectFit: 'contain',
-            maxWidth: 'calc(100% - 15%)',
-            maxHeight: 'calc(100% - 15%)',
+            maxWidth: '420px',
+            width: 'calc(100% - 15%)',
+            height: 'calc(100% - 15%)',
           }}
           src='/images/landing/section_one.png'
           alt='landing image'
