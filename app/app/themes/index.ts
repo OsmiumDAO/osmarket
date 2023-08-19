@@ -17,6 +17,10 @@ export const defaultTheme = (mode: 'dark' | 'light') =>
         styleOverrides: {
           contained: {
             backgroundColor: '#7422DD',
+            textTransform: 'capitalize',
+          },
+          outlined: {
+            textTransform: 'capitalize',
           },
         },
       },
