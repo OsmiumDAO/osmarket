@@ -5,10 +5,20 @@ export const defaultTheme = (mode: 'dark' | 'light') =>
     palette: {
       mode,
       primary: {
-        main: '#3f51b5',
+        main: '#13334F',
+        light: '#7422DD',
       },
       secondary: {
         main: '#f50057',
+      },
+    },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          contained: {
+            backgroundColor: '#7422DD',
+          },
+        },
       },
     },
   })

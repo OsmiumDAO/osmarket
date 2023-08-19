@@ -13,15 +13,22 @@ export default function RootLayout({
 }) {
   const [mode, setMode] = useState<'dark' | 'light'>('light')
   return (
-    <Container
-      className='rootlayout'
-      sx={{ minWidth: '100vw', minHeight: '100vh' }}
-    >
-      <ThemeProvider theme={defaultTheme(mode)}>
+    <ThemeProvider theme={defaultTheme(mode)}>
+      <Container
+        className='rootlayout'
+        sx={{
+          minWidth: '100%',
+          minHeight: '100vh',
+          fontFamily: 'roboto',
+          display: 'flex',
+          flexDirection: 'column',
+          p: 0,
+        }}
+      >
         {children}
         <CssBaseline />
-      </ThemeProvider>
-    </Container>
+      </Container>
+    </ThemeProvider>
   )
 }
 
