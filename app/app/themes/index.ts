@@ -13,6 +13,13 @@ export const defaultTheme = (mode: 'dark' | 'light') =>
       },
     },
     components: {
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            color: 'inherit',
+          },
+        },
+      },
       MuiButton: {
         styleOverrides: {
           contained: {

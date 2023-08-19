@@ -17,7 +17,6 @@ function SectionOne() {
     >
       <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1 }}>
         <Typography
-          component={'h1'}
           variant='h2'
           fontWeight={'700'}
           sx={{ fontSize: { xs: '1.8em', md: '2.5em', lg: '3em' } }}
@@ -33,7 +32,7 @@ function SectionOne() {
           Perferendis exercitationem, ea rem hic, quasi vitae eligendi iusto
           animi placeat sunt sequi sit id atque maiores blanditiis magnam est.
         </Typography>
-        <Box gap={1} display={'flex'} my={1}>
+        <Box gap={1} display={'flex'} justifyContent={'center'} my={1}>
           <Button
             variant='outlined'
             sx={{
@@ -41,6 +40,11 @@ function SectionOne() {
               color: 'primary.main',
               fontSize: { xs: 'x-small', md: 'small' },
               px: { xs: 1, md: 1.8, lg: 2.1 },
+              ':hover': {
+                backgroundColor: 'primary.main',
+                color: '#ffffff',
+                border: ' solid 1px #ffffff',
+              },
             }}
             endIcon={<FaLongArrowAltRight />}
           >
