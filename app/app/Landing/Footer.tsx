@@ -82,14 +82,14 @@ function Footer() {
               <FooterLink>Terms and Conditions</FooterLink>
             </Box>
             <Box display='flex' gap={2} justifyContent={'center'} my={2}>
-              <Link>
+              <Link target='_blank' href='https://twitter.com/OsmiumDao'>
                 <FooterButton
                   endIcon={<ImTwitter style={{ color: '#ffff' }} />}
                 >
                   Twitter
                 </FooterButton>
               </Link>
-              <Link>
+              <Link target='_blank' href='https://github.com/OsmiumDao'>
                 <FooterButton endIcon={<BsGithub style={{ color: '#ffff' }} />}>
                   Github
                 </FooterButton>

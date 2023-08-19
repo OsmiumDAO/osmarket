@@ -48,7 +48,7 @@ function SectionOne() {
               ':hover': {
                 backgroundColor: 'primary.main',
                 color: '#ffffff',
-                border: ' solid 1px #ffffff',
+                border: 'solid 1px #ffffff',
               },
             }}
             endIcon={<FaLongArrowAltRight />}
@@ -59,6 +59,9 @@ function SectionOne() {
             variant='contained'
             endIcon={<FaLongArrowAltRight />}
             sx={{
+              ':hover': {
+                border: 'solid 1px #ffffff',
+              },
               fontSize: { xs: 'x-small', md: 'small' },
               px: { xs: 1, md: 1.8, lg: 2.1 },
             }}

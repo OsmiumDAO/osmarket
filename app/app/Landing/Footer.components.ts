@@ -27,6 +27,7 @@ export const FooterGrid = styled(Grid)(({ theme }) => ({
 
 export const FooterLink = styled(Link)(({ theme }) => ({
   padding: '0 ' + theme.spacing(1),
+  fontWeight: '600',
   [theme.breakpoints.up('xs')]: {
     fontSize: 'xx-small',
   },
