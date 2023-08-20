@@ -10,7 +10,7 @@ function SectionTwo() {
         backgroundColor: ' #FFF8E1',
       }}
     >
-      This is the Lower Long White Section
+      This is the Lower Long White Section That Expands Two Sections
     </Container>
   )
 }
