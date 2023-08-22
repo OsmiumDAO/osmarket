@@ -11,6 +11,7 @@ import {
 import { ImTwitter } from 'react-icons/im'
 import { BsGithub } from 'react-icons/bs'
 import { FooterGrid, FooterLink, FooterButton } from './Footer.components'
+import BrandName from '../components/BrandName'
 
 function Footer() {
   return (
@@ -25,17 +26,10 @@ function Footer() {
           display: 'flex',
           flexDirection: 'column',
           gap: 1,
+          pt: 4,
         }}
       >
-        <Typography
-          variant='h2'
-          fontWeight={'700'}
-          textAlign={'center'}
-          my={4}
-          sx={{ fontSize: { xs: '1em', md: '1.5em' } }}
-        >
-          OSMARKET
-        </Typography>
+        <BrandName />
 
         <Grid container justifyContent={'center'}>
           <FooterGrid xs={12} md={6} lg={4}>
