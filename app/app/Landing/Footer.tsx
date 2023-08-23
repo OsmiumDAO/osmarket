@@ -9,6 +9,7 @@ import {
   Typography,
 } from '@mui/material'
 import { ImTwitter } from 'react-icons/im'
+import { BiLogoDiscordAlt } from 'react-icons/bi'
 import { BsGithub } from 'react-icons/bs'
 import { FooterGrid, FooterLink, FooterButton } from './Footer.components'
 import BrandName from '../components/BrandName'
@@ -76,7 +77,7 @@ function Footer() {
               <FooterLink>Terms and Conditions</FooterLink>
             </Box>
             <Box display='flex' gap={2} justifyContent={'center'} my={2}>
-              <Link target='_blank' href='https://twitter.com/OsmiumDao'>
+              <Link target='_blank' href='https://twitter.com/OSMarket__'>
                 <FooterButton
                   endIcon={<ImTwitter style={{ color: '#ffff' }} />}
                 >
@@ -88,11 +89,20 @@ function Footer() {
                   Github
                 </FooterButton>
               </Link>
+              <Link target='_blank' href='https://discord.gg/6j3AuJYCDK'>
+                <FooterButton
+                  endIcon={<BiLogoDiscordAlt style={{ color: '#ffff' }} />}
+                >
+                  Discord
+                </FooterButton>
+              </Link>
             </Box>
           </FooterGrid>
           <FooterGrid xs={12} md={6} lg={4}>
             <Typography textAlign={'center'}>
-              &copy;Osmarket 2023, All rights reserved.
+              &copy;{' '}
+              <Link href='https://osmiumdao.io'>OsmiumDAO Community</Link>, All
+              rights reserved.
             </Typography>
           </FooterGrid>
         </Grid>

@@ -17,7 +17,7 @@ export default function RootLayout({
       <Container
         className='rootlayout'
         sx={{
-          minWidth: '100%',
+          // minWidth: '100vw',
           minHeight: '100vh',
           fontFamily: 'roboto',
           display: 'flex',

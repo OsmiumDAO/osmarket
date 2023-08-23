@@ -1,6 +1,39 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
-import { FaLongArrowAltRight } from 'react-icons/fa'
+import LearnMoreButton from '../components/buttons/LearnMoreButton'
+import Logo from '../components/Logo'
+
+const SectionTwoHeader = ({ text }: { text: string }) => (
+  <Typography
+    textAlign={'center'}
+    variant='h2'
+    sx={{
+      fontSize: { md: '40px', xs: '25px' },
+      fontWeight: '700',
+      maxWidth: '677px',
+      mx: 'auto',
+    }}
+  >
+    {text}
+  </Typography>
+)
+
+function SectionTwoGridItem({ children }: { children: any }) {
+  return (
+    <Grid
+      xs={12}
+      md={6}
+      item
+      mt={4}
+      maxWidth={'543px'}
+      display={'flex'}
+      flexDirection={'column'}
+      gap={2}
+    >
+      {children}
+    </Grid>
+  )
+}
 
 function SectionTwo() {
   return (
@@ -9,24 +42,14 @@ function SectionTwo() {
         display: 'flex',
         flexDirection: 'column',
         color: 'primary.main',
-        minHeight: { xs: '65vh', md: '80vh' },
-        backgroundColor: ' #FFF8E1',
+        minHeight: { xs: 'none', lg: '80vh' },
+        // backgroundColor: ' #FFF8E1',
         gap: 2,
         py: 4,
       }}
     >
-      <Typography
-        textAlign={'center'}
-        variant='h2'
-        sx={{
-          fontSize: { md: '40px', xs: '25px' },
-          fontWeight: '700',
-          maxWidth: '677px',
-          mx: 'auto',
-        }}
-      >
-        We give you a perfect solution to manage your crypto currency
-      </Typography>
+      <SectionTwoHeader text='We give you a perfect solution to manage your crypto currency' />
+
       <Grid container mt={5}>
         <Grid xs={12} md={6} item>
           <Box
@@ -49,48 +72,54 @@ function SectionTwo() {
             />
           </Box>
         </Grid>
-        <Grid
-          xs={12}
-          md={6}
-          item
-          mt={4}
-          maxWidth={'543px'}
-          display={'flex'}
-          flexDirection={'column'}
-          gap={2}
-        >
-          <Typography
-            textAlign={'center'}
-            variant='h2'
-            sx={{
-              fontSize: { md: '40px', xs: '25px' },
-              fontWeight: '700',
-              maxWidth: '677px',
-              mx: 'auto',
-            }}
-          >
-            Problem Statement
-          </Typography>
+        <SectionTwoGridItem>
+          <SectionTwoHeader text='Problem Statement' />
           <Typography textAlign={'justify'}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum
-            doloremque sequi culpa deserunt enim iste fugiat ab adipisci
-            consectetur.
+            Current Cardano NFT marketplaces offer distinct features but lack
+            user-friendly personalization and trading flexibility. Swapping NFT
+            for NFT or NFT for chosen native tokens is not possible. Liquidity
+            issues hinder traders from exiting their positions, leading to ADA
+            lock-ins and unrealized gains. Moreover, the absence of direct
+            fiat-crypto acquisition due to complex KYC and risks from
+            non-custodial platforms limits blockchain entry. OSMarket tackles
+            these obstacles, revolutionizing NFT trading and easing the barriers
+            to entry.
           </Typography>
-          <Button
-            variant='contained'
-            endIcon={<FaLongArrowAltRight />}
-            sx={{
-              maxWidth: '250px',
-              ':hover': {
-                border: 'solid 1px #ffffff',
-              },
-              fontSize: { xs: 'x-small', md: 'small' },
-              px: { xs: 1, md: 1.8, lg: 2.1 },
-            }}
-          >
-            Learn More
-          </Button>
+          <LearnMoreButton />
+        </SectionTwoGridItem>
+      </Grid>
+      <Grid container mt={5}>
+        <SectionTwoGridItem>
+          <SectionTwoHeader text='Value Proposition' />
+          <Typography textAlign={'justify'}>
+            Experience Limitless Trading: Escape liquidity challenges, ADA
+            lock-ins, and complex fiat entry with our unique marketplace
+            offering.
+          </Typography>
+          <LearnMoreButton />
+        </SectionTwoGridItem>
+        <Grid xs={12} md={6} item sx={{ display: { xs: 'none', md: 'flex' } }}>
+          {/* <Logo number={2} /> */}
         </Grid>
+      </Grid>
+
+      <Grid container mt={5}>
+        <Grid xs={12} md={6} item sx={{ display: { xs: 'none', md: 'flex' } }}>
+          {/* <Logo number={1} /> */}
+        </Grid>
+        <SectionTwoGridItem>
+          <SectionTwoHeader text='Competitive Advantage' />
+          <Typography textAlign={'justify'}>
+            Enhancing Unparalleled Flexibility OSMarket addresses critical gaps
+            in the current Cardano NFT marketplaces, setting itself apart
+            through unique features that enhance user experience. Enjoy
+            unmatched personalization and trade flexibility, swapping NFTs
+            effortlessly. Say goodbye to liquidity obstacles and ADA lock-ins.
+            Plus, acquire crypto assets seamlessly with direct fiat. Join
+            OSMarket for a new era of inclusive, dynamic, and secure trading.
+          </Typography>
+          <LearnMoreButton />
+        </SectionTwoGridItem>
       </Grid>
     </Container>
   )

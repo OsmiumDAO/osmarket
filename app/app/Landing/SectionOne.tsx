@@ -1,13 +1,21 @@
-import { Box, Button, Container, Typography } from '@mui/material'
+import {
+  Box,
+  Button,
+  Container,
+  List,
+  ListItem,
+  Typography,
+} from '@mui/material'
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
+import LearnMoreButton from '../components/buttons/LearnMoreButton'
 
 function SectionOne() {
   return (
     <Container
       sx={{
         backgroundColor: 'primary.main',
-        minHeight: { xs: '65vh', md: '80vh' },
+        minHeight: { xs: 'none', lg: '80vh' },
         color: '#ffff',
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
@@ -26,11 +34,26 @@ function SectionOne() {
         <Typography
           sx={{ fontSize: { xs: 'small', md: 'normal', lg: 'large' } }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-          delectus. Enim sed libero nam sequi eaque quasi, autem eos tempore
-          ipsa necessitatibus, nobis quo sit hic aliquid ipsum, sapiente natus.
-          Perferendis exercitationem, ea rem hic, quasi vitae eligendi iusto
-          animi placeat sunt sequi sit id atque maiores blanditiis magnam est.
+          <List sx={{ px: 0, '& > *': { pl: 0 } }}>
+            <ListItem>
+              FT Bundles: List token bundles for sale, each deriving its value
+              from real-time aggregated data on DEX platforms.
+            </ListItem>
+            <ListItem>
+              NFT2NFT Swap: Swap NFTs seamlessly. Our streamlined process
+              matches compatible swaps automatically, notifying you for easy
+              decisions.
+            </ListItem>
+            <ListItem>
+              NFT2FT Swap: Swap NFTs for chosen FTs effortlessly. Define
+              acceptable tokens for swaps. Initiate swap contracts and receive
+              notifications for suitable trades.
+            </ListItem>
+            <ListItem>
+              Fiat2Crypto Exchange: Seamlessly exchange fiat and crypto with our
+              smart contract-based escrow.
+            </ListItem>
+          </List>
         </Typography>
         <Box
           gap={1}
@@ -55,19 +78,7 @@ function SectionOne() {
           >
             Let's Get You Started
           </Button>
-          <Button
-            variant='contained'
-            endIcon={<FaLongArrowAltRight />}
-            sx={{
-              ':hover': {
-                border: 'solid 1px #ffffff',
-              },
-              fontSize: { xs: 'x-small', md: 'small' },
-              px: { xs: 1, md: 1.8, lg: 2.1 },
-            }}
-          >
-            Learn More
-          </Button>
+          <LearnMoreButton />
         </Box>
       </Box>
       <Box

@@ -17,6 +17,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { AiOutlineLogin } from 'react-icons/ai'
 import { LiaRegistered } from 'react-icons/lia'
 import { BsCloudDownload } from 'react-icons/bs'
+import Logo from '../components/Logo'
 
 function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -46,6 +47,7 @@ function Header() {
         {/* Brand Section */}
         <Box>
           <BrandName />
+          {/* <Logo /> */}
         </Box>
 
         {/* Login Section for Mobile */}
@@ -106,7 +108,7 @@ function Header() {
             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           >
             <MenuItem onClick={handleClose}>
-              <MuiLink href={'/whitepaper'} download={true}>
+              <MuiLink href={'/white_paper.pdf'} download={true}>
                 <ListItemIcon>
                   <BsCloudDownload fontSize='small' />
                 </ListItemIcon>
@@ -115,7 +117,7 @@ function Header() {
             </MenuItem>
             <Divider />
             <MenuItem onClick={handleClose}>
-              <Link href={'/login'}>
+              <Link href={'/comingsoon'}>
                 <ListItemIcon>
                   <AiOutlineLogin fontSize='small' />
                 </ListItemIcon>
@@ -123,7 +125,7 @@ function Header() {
               </Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <Link href={'/signup'}>
+              <Link href={'/comingsoon'}>
                 <ListItemIcon>
                   <LiaRegistered fontSize='small' />
                 </ListItemIcon>
@@ -140,15 +142,15 @@ function Header() {
           flex={'1'}
           justifyContent={'flex-end'}
         >
-          <MuiLink href={'/whitepaper'} download={true}>
+          <MuiLink href={'/white_paper.pdf'} download={true}>
             <Button sx={{ color: '#ffffff', mr: 10 }}>White Paper</Button>
           </MuiLink>
           <Box display={'flex'}>
-            <Link href={'/login'}>
+            {/* <Link href={'/login'}>
               <Button sx={{ color: '#ffffff' }}>Login</Button>
-            </Link>
-            <Link href={'/signup'}>
-              <Button variant='contained'> Signup</Button>
+            </Link> */}
+            <Link href={'/comingsoon'}>
+              <Button variant='contained'>Launch App</Button>
             </Link>
           </Box>
         </Box>
