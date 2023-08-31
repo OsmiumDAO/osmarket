@@ -5,8 +5,8 @@ function Logo({ number }: { number: 1 | 2 | 3 | 4 }) {
   return (
     <Container
       sx={{
-        w: '210px',
-        h: '70px',
+        w: '143px',
+        h: '53px',
         p: 0,
       }}
     >
@@ -15,8 +15,8 @@ function Logo({ number }: { number: 1 | 2 | 3 | 4 }) {
         alt='osmarket'
         style={{
           objectFit: 'contain',
-          width: 'calc(100% - 15%)',
-          height: 'calc(100% - 15%)',
+          width: '143px',
+          height: '53px',
         }}
       />
     </Container>

@@ -18,13 +18,26 @@ const SectionTwoHeader = ({ text }: { text: string }) => (
   </Typography>
 )
 
+const SectionTwoImage = ({ image, alt }: { image: string; alt: string }) => (
+  <img
+    style={{
+      objectFit: 'contain',
+      maxWidth: '420px',
+      width: 'calc(100% - 8%)',
+      height: 'calc(100% - 8%)',
+    }}
+    src={`/images/landing/section_two_${image}.png`}
+    alt='landing image'
+  />
+)
+
 function SectionTwoGridItem({ children }: { children: any }) {
   return (
     <Grid
       xs={12}
       md={6}
       item
-      mt={4}
+      mt={3}
       maxWidth={'543px'}
       display={'flex'}
       flexDirection={'column'}
@@ -42,7 +55,7 @@ function SectionTwo() {
         display: 'flex',
         flexDirection: 'column',
         color: 'primary.main',
-        minHeight: { xs: 'none', lg: '80vh' },
+        minHeight: { xs: 'none', lg: '70vh' },
         // backgroundColor: ' #FFF8E1',
         gap: 2,
         py: 4,
@@ -60,16 +73,7 @@ function SectionTwo() {
               alignItems: 'center',
             }}
           >
-            <img
-              style={{
-                objectFit: 'contain',
-                maxWidth: '420px',
-                width: 'calc(100% - 8%)',
-                height: 'calc(100% - 8%)',
-              }}
-              src='/images/landing/section_two.png'
-              alt='landing image'
-            />
+            <SectionTwoImage image='1' alt='problem statement' />
           </Box>
         </Grid>
         <SectionTwoGridItem>
@@ -94,12 +98,24 @@ function SectionTwo() {
           <Typography textAlign={'justify'}>
             Experience Limitless Trading: Escape liquidity challenges, ADA
             lock-ins, and complex fiat entry with our unique marketplace
-            offering.
+            offering. Unlock an Unbounded Trading Experience: Say goodbye to
+            liquidity hurdles, ADA lock-ins, and the convoluted maze of fiat
+            entry barriers through our one-of-a-kind marketplace solution.
+            Embrace the freedom to trade without constraints, and empower
+            yourself with an unparalleled trading journey that transcends
+            limitations.
           </Typography>
           <LearnMoreButton />
         </SectionTwoGridItem>
-        <Grid xs={12} md={6} item sx={{ display: { xs: 'none', md: 'flex' } }}>
-          {/* <Logo number={2} /> */}
+        <Grid
+          xs={12}
+          md={6}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          item
+        >
+          <SectionTwoImage image='2' alt='value proposition' />
         </Grid>
       </Grid>
 

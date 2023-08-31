@@ -46,8 +46,8 @@ function Header() {
       >
         {/* Brand Section */}
         <Box>
-          <BrandName />
-          {/* <Logo /> */}
+          {/* <BrandName /> */}
+          <Logo number={2} />
         </Box>
 
         {/* Login Section for Mobile */}

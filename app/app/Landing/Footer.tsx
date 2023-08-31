@@ -12,7 +12,7 @@ import { ImTwitter } from 'react-icons/im'
 import { BiLogoDiscordAlt } from 'react-icons/bi'
 import { BsGithub } from 'react-icons/bs'
 import { FooterGrid, FooterLink, FooterButton } from './Footer.components'
-import BrandName from '../components/BrandName'
+import Logo from '../components/Logo'
 
 function Footer() {
   return (
@@ -30,7 +30,14 @@ function Footer() {
           pt: 4,
         }}
       >
-        <BrandName />
+        <Box
+          mx='auto'
+          display={'flex'}
+          justifyContent={'center'}
+          width={'full'}
+        >
+          <Logo number={2} />
+        </Box>
 
         <Grid container justifyContent={'center'}>
           <FooterGrid xs={12} md={6} lg={4}>

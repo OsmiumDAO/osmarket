@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  List,
-  ListItem,
-  Typography,
-} from '@mui/material'
+import { Box, Button, Container, List, Typography } from '@mui/material'
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import LearnMoreButton from '../components/buttons/LearnMoreButton'
@@ -15,7 +8,7 @@ function SectionOne() {
     <Container
       sx={{
         backgroundColor: 'primary.main',
-        minHeight: { xs: 'none', lg: '80vh' },
+        minHeight: { xs: 'none', lg: '70vh' },
         color: '#ffff',
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
@@ -32,28 +25,28 @@ function SectionOne() {
           Power Your Trading Experience With our Innovative MarketPlace
         </Typography>
         <Typography
-          sx={{ fontSize: { xs: 'small', md: 'normal', lg: 'large' } }}
+          component={'ul'}
+          sx={{
+            '& > *': { fontSize: { xs: 'small', md: 'normal', lg: 'large' } },
+          }}
         >
-          <List sx={{ px: 0, '& > *': { pl: 0 } }}>
-            <ListItem>
-              FT Bundles: List token bundles for sale, each deriving its value
-              from real-time aggregated data on DEX platforms.
-            </ListItem>
-            <ListItem>
-              NFT2NFT Swap: Swap NFTs seamlessly. Our streamlined process
-              matches compatible swaps automatically, notifying you for easy
-              decisions.
-            </ListItem>
-            <ListItem>
-              NFT2FT Swap: Swap NFTs for chosen FTs effortlessly. Define
-              acceptable tokens for swaps. Initiate swap contracts and receive
-              notifications for suitable trades.
-            </ListItem>
-            <ListItem>
-              Fiat2Crypto Exchange: Seamlessly exchange fiat and crypto with our
-              smart contract-based escrow.
-            </ListItem>
-          </List>
+          <Typography component={'li'}>
+            FT Bundles: List token bundles for sale, each deriving its value
+            from real-time aggregated data on DEX platforms.
+          </Typography>
+          <Typography component={'li'}>
+            NFT2NFT Swap: Swap NFTs seamlessly. Our streamlined process matches
+            compatible swaps automatically, notifying you for easy decisions.
+          </Typography>
+          <Typography component={'li'}>
+            NFT2FT Swap: Swap NFTs for chosen FTs effortlessly. Define
+            acceptable tokens for swaps. Initiate swap contracts and receive
+            notifications for suitable trades.
+          </Typography>
+          <Typography component={'li'}>
+            Fiat2Crypto Exchange: Seamlessly exchange fiat and crypto with our
+            smart contract-based escrow.
+          </Typography>
         </Typography>
         <Box
           gap={1}

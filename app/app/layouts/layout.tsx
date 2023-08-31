@@ -11,9 +11,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [mode, setMode] = useState<'dark' | 'light'>('light')
   return (
-    <ThemeProvider theme={defaultTheme(mode)}>
+    <ThemeProvider theme={defaultTheme('light')}>
       <Container
         className='rootlayout'
         sx={{
