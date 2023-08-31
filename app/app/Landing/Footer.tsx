@@ -79,11 +79,11 @@ function Footer() {
                 justifyContent: 'center',
               }}
             >
-              <FooterLink>Privacy</FooterLink>
+              <FooterLink borderLeft={'solid 1px #FFFFFF'}>Privacy</FooterLink>
               <FooterLink>Help center</FooterLink>
-              <FooterLink>Terms and Conditions</FooterLink>
+              <FooterLink>Terms & Cond.</FooterLink>
             </Box>
-            <Box display='flex' gap={2} justifyContent={'center'} my={2}>
+            <Box display='flex' gap={2} justifyContent={'center'} mt={2}>
               <Link target='_blank' href='https://twitter.com/OSMarket__'>
                 <FooterButton
                   endIcon={<ImTwitter style={{ color: '#ffff' }} />}
