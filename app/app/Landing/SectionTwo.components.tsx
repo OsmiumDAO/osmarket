@@ -6,7 +6,7 @@ export const SectionTwoHeader = ({ text }: { text: string }) => (
     textAlign={'center'}
     variant='h2'
     sx={{
-      fontSize: { md: '40px', xs: '25px' },
+      fontSize: { md: '35px', xs: '22px' },
       fontWeight: '700',
       maxWidth: '677px',
       mx: 'auto',
@@ -26,9 +26,10 @@ export const SectionTwoImage = ({
   <img
     style={{
       objectFit: 'contain',
-      maxWidth: '420px',
-      width: 'calc(100% - 8%)',
-      height: 'calc(100% - 8%)',
+      margin: 'auto',
+      width: '95%',
+      height: '95%',
+      maxHeight: '420px',
     }}
     src={`/images/landing/section_two_${image}.png`}
     alt='landing image'
@@ -40,8 +41,9 @@ export function SectionTwoGridItem({ children }: { children: any }) {
     <Grid
       xs={12}
       md={6}
+      p={2}
       item
-      mt={3}
+      mt={1}
       maxWidth={'543px'}
       display={'flex'}
       flexDirection={'column'}

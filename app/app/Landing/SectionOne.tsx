@@ -8,7 +8,7 @@ function SectionOne() {
     <Container
       sx={{
         backgroundColor: 'primary.main',
-        minHeight: { xs: 'none', lg: '70vh' },
+        minHeight: { xs: 'none', lg: '80vh' },
         color: '#ffff',
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
@@ -25,25 +25,24 @@ function SectionOne() {
           Power Your Trading Experience With our Innovative MarketPlace
         </Typography>
         <Typography
-          component={'ul'}
           sx={{
             '& > *': { fontSize: { xs: 'small', md: 'normal', lg: 'large' } },
           }}
         >
-          <Typography component={'li'}>
+          <Typography>
             FT Bundles: List token bundles for sale, each deriving its value
             from real-time aggregated data on DEX platforms.
           </Typography>
-          <Typography component={'li'}>
+          <Typography>
             NFT2NFT Swap: Swap NFTs seamlessly. Our streamlined process matches
             compatible swaps automatically, notifying you for easy decisions.
           </Typography>
-          <Typography component={'li'}>
+          <Typography>
             NFT2FT Swap: Swap NFTs for chosen FTs effortlessly. Define
             acceptable tokens for swaps. Initiate swap contracts and receive
             notifications for suitable trades.
           </Typography>
-          <Typography component={'li'}>
+          <Typography>
             Fiat2Crypto Exchange: Seamlessly exchange fiat and crypto with our
             smart contract-based escrow.
           </Typography>

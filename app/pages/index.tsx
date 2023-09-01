@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 function IndexPage() {
   return (
     <RootLayout>
-      <Container sx={{ py: { xs: 0.5, md: 1, lg: 2 } }}>
+      <Container sx={{ py: { xs: 0.5, md: 1, lg: 1 } }}>
         <Header />
         <SectionOne />
         <SectionTwo />

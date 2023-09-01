@@ -15,7 +15,7 @@ function SectionTwo() {
         flexDirection: 'column',
         color: 'primary.main',
         minHeight: { xs: 'none', lg: '70vh' },
-        // backgroundColor: ' #FFF8E1',#F5F7F9
+        backgroundColor: '#F5F7F9', //'#FFF8E1',//#F5F7F9
         gap: 2,
         py: 4,
       }}
@@ -23,18 +23,9 @@ function SectionTwo() {
       <SectionTwoHeader text='We give you a perfect solution to manage your crypto currency' />
 
       <Grid container mt={5}>
-        <Grid xs={12} md={6} item>
-          <Box
-            sx={{
-              flex: 1,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <SectionTwoImage image='1' alt='problem statement' />
-          </Box>
-        </Grid>
+        <SectionTwoGridItem>
+          <SectionTwoImage image='1' alt='problem statement' />
+        </SectionTwoGridItem>
         <SectionTwoGridItem>
           <SectionTwoHeader text='Problem Statement' />
           <Typography textAlign={'justify'}>
@@ -53,45 +44,35 @@ function SectionTwo() {
       </Grid>
       <Grid container mt={5}>
         <SectionTwoGridItem>
-          <SectionTwoHeader text='Value Proposition' />
+          <SectionTwoHeader text='Experience Limitless Trading' />
           <Typography textAlign={'justify'}>
-            Experience Limitless Trading: Escape liquidity challenges, ADA
-            lock-ins, and complex fiat entry with our unique marketplace
-            offering. Unlock an Unbounded Trading Experience: Say goodbye to
-            liquidity hurdles, ADA lock-ins, and the convoluted maze of fiat
-            entry barriers through our one-of-a-kind marketplace solution.
-            Embrace the freedom to trade without constraints, and empower
-            yourself with an unparalleled trading journey that transcends
-            limitations.
+            Escape liquidity challenges, ADA lock-ins, and complex fiat entry
+            with our unique marketplace offering. Unlock an Unbounded Trading
+            Experience: Say goodbye to liquidity hurdles, ADA lock-ins, and the
+            convoluted maze of fiat entry barriers through our one-of-a-kind
+            marketplace solution. Embrace the freedom to trade without
+            constraints, and empower yourself with an unparalleled trading
+            journey that transcends limitations.
           </Typography>
           <LearnMoreButton />
         </SectionTwoGridItem>
-        <Grid
-          xs={12}
-          md={6}
-          display={'flex'}
-          justifyContent={'center'}
-          alignItems={'center'}
-          item
-        >
+        <SectionTwoGridItem>
           <SectionTwoImage image='2' alt='value proposition' />
-        </Grid>
+        </SectionTwoGridItem>
       </Grid>
 
       <Grid container mt={5}>
-        <Grid xs={12} md={6} item sx={{ display: { xs: 'none', md: 'flex' } }}>
-          {/* <Logo number={1} /> */}
-        </Grid>
+        <SectionTwoGridItem>{/* <Logo number={1} /> */}</SectionTwoGridItem>
         <SectionTwoGridItem>
-          <SectionTwoHeader text='Competitive Advantage' />
+          <SectionTwoHeader text='Enhancing Unparalleled Flexibility' />
           <Typography textAlign={'justify'}>
-            Enhancing Unparalleled Flexibility OSMarket addresses critical gaps
-            in the current Cardano NFT marketplaces, setting itself apart
-            through unique features that enhance user experience. Enjoy
-            unmatched personalization and trade flexibility, swapping NFTs
-            effortlessly. Say goodbye to liquidity obstacles and ADA lock-ins.
-            Plus, acquire crypto assets seamlessly with direct fiat. Join
-            OSMarket for a new era of inclusive, dynamic, and secure trading.
+            OSMarket addresses critical gaps in the current Cardano NFT
+            marketplaces, setting itself apart through unique features that
+            enhance user experience. Enjoy unmatched personalization and trade
+            flexibility, swapping NFTs effortlessly. Say goodbye to liquidity
+            obstacles and ADA lock-ins. Plus, acquire crypto assets seamlessly
+            with direct fiat. Join OSMarket for a new era of inclusive, dynamic,
+            and secure trading.
           </Typography>
           <LearnMoreButton />
         </SectionTwoGridItem>
